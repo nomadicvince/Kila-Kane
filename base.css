@@ -1,0 +1,498 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; 
+}
+
+body {
+  box-sizing: border-box;
+  min-width: 400px; 
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgb(252, 248, 248);
+}
+
+/* Link */
+
+/* unvisited link */
+a:link {
+  color: rgb(252, 110, 117)en;
+}
+
+/* visited link */
+a:visited {
+  color: rgba(183, 52, 58, 1);
+}
+
+/* mouse over link */
+a:hover {
+  color: rgba(68, 69, 67, 1);
+}
+
+/* selected link */
+a:active {
+  color: rgb(212, 25, 34);
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* animation */
+
+@keyframes story {
+  0%   {
+    opacity: 0;
+    transform: scale(0.7);
+    transform: translateX(-2rem);
+    color: #000;
+  }
+  50%  {
+    opacity: .7;
+    color: #000;
+  }
+  100% {opacity: 1;
+    transform: scale(1.0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes overlay {
+  0%   {
+    opacity: 0;
+  }
+  50%  {
+    opacity: .7;
+  }
+  100% {opacity: 1;
+  }
+}
+
+@keyframes hero {
+  0% {background-position: 0 1px;}
+  100% {background-position: 0 -480px;}
+}
+
+
+.header {
+  background-color: rgba(183, 52, 58, 1);
+  padding: .9px;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.logo img {
+  width: 20%;
+  height: auto;
+  padding: 1px;
+  margin-bottom: 4px;
+  top: .5rem;
+  left: 3rem;
+  position: relative;
+} 
+
+.navigation {
+  position: relative;
+  top: 2%;
+  left: 50%;
+  margin-top: -47px;
+  font-size: 2.6rem;
+}
+
+.navigation ul {
+  height: auto;
+  padding: 0px 0px 2px 0px;
+}
+
+.navigation li { 
+display: inline; 
+padding: 20px; 
+}
+
+.mobile-nav {
+  display: none;
+}
+
+.hidden-nav {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  z-index: 3;
+  font-size: 5rem;
+  display: none;
+}
+
+.hidden-nav ul {
+  background-color: rgba(0, 0, 0, .7);
+}
+
+.hero {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  background-image:  url("img/kila_main.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  transition: all 5s;
+  animation: hero 4s ease forwards;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, .4);
+  height: inherit;
+  transition: all .2s;
+  animation: overlay 2s ease-in-out;
+}
+
+.story {
+  font-size: 5rem;
+  position: fixed;
+  top: 53%;
+  left: 5%;
+  text-shadow: 5px 2px #0000001c;
+  transition: all .2s;
+  animation: story 2s linear;
+}
+
+.about {
+  background-color: rgba(183, 52, 58, 1);
+  width: 100%;
+  height: auto;
+  position: relative;
+  font-size: 2rem;
+  padding: 24px;
+  line-height: 20px;
+}
+
+.about h2 {
+  margin-bottom: 18px;
+ }
+
+.buy {
+  width: 100%;
+  height: auto;
+  position: relative;  
+  background-image: url("img/books.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.blog {
+  background-color: rgba(68, 69, 67, 1);
+  width: 100%;
+  height: 150px;
+  position: relative;
+  font-size: 2rem;
+  padding: 24px;
+  line-height: 20px;
+}
+
+.blog h2 {
+ margin-bottom: 25px;
+}
+
+.contact {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 14px;
+  background-image: url("img/contact.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 1);
+  width: 100%;
+  height: auto;
+  position: relative;
+  font-size: 2rem;
+  text-align: center;
+  padding: 7px;
+
+}
+
+/* book cards */
+
+.card {
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.card img {
+  border-radius: 5px 5px 0 0;
+}
+  
+  
+.blurb-container {
+  padding: 2px 16px;
+  height: auto;
+  font-size: .5em;
+  color: #000;
+}
+
+.blurb {
+  height: 100%;
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  background-color: black;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: rgba(255, 255, 255, .5);
+  padding: 10px;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 30%;;
+  margin: 12px auto;
+  font-size: 30px;  
+}
+
+.price {
+  font-size: 1.4rem;
+  margin-top: 13px;
+}
+
+/* Form */
+
+.smart-green {
+  margin-left:auto;
+  margin-right:auto;
+  width: 70%;
+  background: rgba(255, 255, 255, .5);
+  padding: 30px 30px 20px 30px;
+  color: #666;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+.smart-green h1 {
+  padding: 20px 0px 20px 40px;
+  display: block;
+  margin: -30px -30px 10px -30px;
+  color: #FFF;
+  background: #9DC45F;
+  text-shadow: 1px 1px 1px #949494;
+  border-radius: 5px 5px 0px 0px;
+  -webkit-border-radius: 5px 5px 0px 0px;
+  -moz-border-radius: 5px 5px 0px 0px;
+  border-bottom:1px solid #89AF4C;
+
+}
+.smart-green h1>span {
+  display: block;
+  font-size: 11px;
+  color: #FFF;
+}
+
+.smart-green h2 {
+  font-size: 3rem
+}
+
+.smart-green label {
+  display: block;
+  margin: 0px 0px 5px;
+}
+.smart-green label>span {
+  float: left;
+  margin-top: 10px;
+  color: #5E5E5E;
+}
+.smart-green input[type="text"], .smart-green input[type="email"], .smart-green textarea, .smart-green select {
+  color: #555;
+  height: 30px;
+  line-height:15px;
+  width: 100%;
+  padding: 0px 0px 0px 10px;
+  margin-top: 2px;
+  border: 1px solid #E5E5E5;
+  background: rgba(255, 255, 255, .8);
+  outline: 0;
+  -webkit-box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+  box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+  transition: 0.5s ease-in-out;
+}
+.smart-green textarea{
+  height:100px;
+  padding-top: 10px;
+}
+
+.smart-green input[type="text"]:hover {
+  background: rgba(255, 160, 255, .9);
+  color: #fff;
+  transition: 0.5s ease-in-out;
+}
+
+.smart-green input[type="email"]:hover {
+  background: rgba(183, 52, 58, .8);
+  color: #fff;
+  transition: 0.5s ease-in-out;
+}
+
+.smart-green input[type="text"]:hover {
+  background: rgba(183, 52, 58, .8);
+  color: #fff;
+  transition: 0.5s ease-in-out;
+}
+
+.smart-green textarea:hover {
+  background: rgba(183, 52, 58, .8);
+  color: #fff;
+  transition: 0.5s ease-in-out;
+}
+
+.smart-green select {
+  background: url('down-arrow.png') no-repeat right, -moz-linear-gradient(top, #FBFBFB 0%, #E9E9E9 100%);
+  background: url('down-arrow.png') no-repeat right, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fbfbfb), color-stop(100%,#E9E9E9));
+  text-indent: 0.01px;
+  text-overflow: '';
+  width:100%;
+  height:30px;
+}
+.smart-green .button {
+  background-color: #b7343a;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-border-radius: 5px;
+  border: none;
+  padding: 10px 25px 10px 25px;
+  color: #FFF;
+  transition: 0.5s ease-in-out;
+}
+.smart-green .button:hover {
+  background-color:#fff;
+  color: #000;
+  transition: 0.5s ease-in-out;
+}
+
+#error {
+  color: #b7343a;
+  font-size: .9em;
+}
+
+
+/* Image preload */
+
+#preloaded-images {
+  position: absolute;
+  overflow: hidden;
+  left: -9999px; 
+  top: -9999px;
+  height: 1px;
+  width: 1px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 992px) {
+
+  html {
+    font-size: 45.5%; 
+  }
+
+  @keyframes hero {
+    0% {background-position: 0 1px;}
+    100% {background-position: 0 -100px;}
+  }
+
+  .logo img{
+    width: 30%;
+  }
+
+  .navigation {
+    font-size: 2.3rem;
+    padding: 10px;
+  }
+
+  .story {
+    font-size: 5rem;
+    left: 25%;
+  }
+}
+
+@media (max-width: 750px) {
+
+  html {
+    font-size: 40.5%; 
+  }
+
+  .logo img{
+    width: 35%;
+  }
+
+  @keyframes hero {
+    0% {background-position: 0 1px;}
+    100% {background-position: 0 -80px;}
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .mobile-nav {
+    position: absolute;
+    top: 5%;;
+    left: 70%;
+    display: block;
+    font-size: 3.2rem;
+  }
+
+  .story {
+    font-size: 5rem;
+    left: 25%;
+  }
+
+  .price {
+    font-size: 2.1rem;
+  }
+
+  .flex-container {
+    display: block;
+  }
+
+  .flex-container > div {  
+    width: 100%;    
+  }
+
+  .smart-green {
+    width: 95%;
+  }
+}
+
+@media (max-width: 300px) {
+
+
+  @keyframes hero {
+    0% {background-position: 0 1px;}
+    100% {background-position: 0 -30px;}
+  }  
+}

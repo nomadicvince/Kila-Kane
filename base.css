@@ -5,27 +5,22 @@
   padding: 0;
   box-sizing: inherit; }
 
-html {
+html, body {
   font-size: 62.5%; 
-}
-
-body {
   box-sizing: border-box;
   min-width: 400px; 
-}
-
-body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
   color: rgb(252, 248, 248);
+  scroll-behavior: smooth;
 }
 
-/* Link */
+/* Global Links */
 
 /* unvisited link */
 a:link {
-  color: rgb(252, 110, 117)en;
+  color: rgba(252, 110, 117,1);
 }
 
 /* visited link */
@@ -41,6 +36,54 @@ a:hover {
 /* selected link */
 a:active {
   color: rgb(212, 25, 34);
+}
+
+/* Nav Links */
+
+/* unvisited link */
+.navigation a:link {
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  transition: all .3s;
+}
+
+/* visited link */
+.navigation a:visited {
+  color: rgba(255, 255, 255, 1);
+}
+
+/* mouse over link */
+.navigation a:hover {
+  color: rgba(68, 69, 67, 1);
+}
+
+/* selected link */
+.navigation a:active {
+  color: rgb(212, 25, 34);
+}
+
+/* Mobile Nav Links */
+
+/* unvisited link */
+.hidden-nav a:link {
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  transition: all .3s;
+}
+
+/* visited link */
+.hidden-nav a:visited {
+  color: rgba(255, 255, 255, 1);
+}
+
+/* mouse over link */
+.hidden-nav a:hover {
+  color: rgba(212, 25, 34, 1);
+}
+
+/* selected link */
+.hidden-nav a:active {
+  color: rgba(212, 25, 34, 1);
 }
 
 .clearfix::after {
@@ -90,7 +133,12 @@ a:active {
   padding: .9px;
   width: 100%;
   height: auto;
-  position: relative;
+  position: fixed;
+  z-index: 3;
+}
+
+.logo {
+  height: auto;
 }
 
 .logo img {
@@ -101,6 +149,7 @@ a:active {
   top: .5rem;
   left: 3rem;
   position: relative;
+  line-height: 2px;
 } 
 
 .navigation {
@@ -126,18 +175,7 @@ padding: 20px;
 }
 
 .hidden-nav {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  text-align: center;
-  z-index: 3;
-  font-size: 5rem;
   display: none;
-}
-
-.hidden-nav ul {
-  background-color: rgba(0, 0, 0, .7);
 }
 
 .hero {
@@ -221,7 +259,9 @@ padding: 20px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  font-size: 1.9rem;
 }
+
 
 .footer {
   background-color: rgba(0, 0, 0, 1);
@@ -460,11 +500,32 @@ padding: 20px;
 
   .mobile-nav {
     position: absolute;
-    top: 5%;;
+    top: 7%;
     left: 70%;
     display: block;
     font-size: 3.2rem;
+    cursor: pointer;
   }
+
+  .hidden-nav {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 20;
+    left: 0;
+    text-align: center;
+    z-index: 3;
+    font-size: 5rem;
+    transition: height 1s ease-out;
+  }
+
+  .hidden-nav ul {
+    list-style-type: none;
+    background-color: rgba(0, 0, 0, .7);
+  }
+
+  
 
   .story {
     font-size: 5rem;

@@ -132,23 +132,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
   </div>
   <nav class="navigation">
     <ul>
-        <li>About</li>
-        <li>Buy</li>
-        <li>Blog</li>
-        <li>Contact</li>
+        <a href="#about"><li>About</li></a>
+        <a href="#buy"><li>Buy</li></a>
+        <a href="#blog"><li>Blog</li></a>
+        <a href="#contact"><li>Contact</li></a>
     </ul>
    </nav>
    <div class="mobile-nav">
-        <i class="fa fa-bars" aria-hidden="true" fa-2x></i>
+        <i class="fa fa-bars" id="switch" aria-hidden="true" fa-2x></i>
     </div>
-        <div class="hidden-nav">
+    <div class="hidden-nav">
         <ul>
-            <li>About</li>
-            <li>Buy</li>
-            <li>Blog</li>
-            <li>Contact</li>
+            <a href="#about"><li>About</li></a>
+            <a href="#buy"><li>Buy</li></a>
+            <a href="#blog"><li>Blog</li></a>
+            <a href="#contact"><li>Contact</li></a>
         </ul>
     </div>
+
 </div>
 
   <div class="hero">
@@ -156,14 +157,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
     <p class="story">Tell Me Your Story</p>
   </div>
   
-  <div class="about">
-    <h2>About me</h2>
+  <div class="about" id="about">
+    <h2>My Story</h2>
     <p>
-    I was born and raised in Detroit, MI. I graduated from Cass Technical High School in 1999. I've been married to my husband for 11 years and, we have one son. I knew at an early age, I would one day follow my dreams of writing books. In 8th grade, my English teacher, confirmed my thoughts. My first novel "Life Won't Stop #FORNOTHING starts my journey. My hope is to lead you on a fantastic ride. Buckle up and enjoy the scenery because I'm not stopping....#FORNOTHING
+    I was born and raised in Detroit, Michigan, where I graduated from Cass Technical High School in 1999. I've been married to my husband for 11 years and, we have one son. I knew at an early age, I would one day follow my dreams of writing books. In 8th grade, my English teacher, confirmed my thoughts. My first novel "Life Won't Stop #FORNOTHING starts my journey. My hope is to lead you on a fantastic ride. Buckle up and enjoy the scenery because I'm not stopping....#FORNOTHING
     </p>
   </div>
   
-  <div class="buy">
+  <div class="buy" id="buy">
   <div class="flex-container">
             <div class="card">
                 <div class="photo">
@@ -205,12 +206,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
 
   </div>
   
-  <div class="blog">
+  <div class="blog" id="blog">
   <h2>Latest Blog Post</h2>
             <p>Read about my latest thoughts and products in my <a href="http://www.kilakane.com/blog/">blog</a>.</p>
   </div>
 
-  <div class="contact">
+  <div class="contact" id="contact">
           <form action="#email" method="post" class="smart-green" id="contactform"      enctype="multipart/form-data">
            <h2 id="email">Contact Me!</h2>
             <div><label>Full Name*</label>
@@ -230,7 +231,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
                 <input type="submit" class="button" id="submit" value="Submit" />
             </div>
         </form>
-        
+       <script src="toggle.js"></script>
     </div>
   </div>
 

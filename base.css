@@ -21,6 +21,7 @@ html, body {
 /* unvisited link */
 a:link {
   color: rgba(252, 110, 117,1);
+  text-decoration: none;
 }
 
 /* visited link */
@@ -60,6 +61,14 @@ a:active {
 /* selected link */
 .navigation a:active {
   color: rgb(212, 25, 34);
+}
+
+/* fa fa Links */
+
+
+/* mouse over link */
+.fa-bars:hover {
+  color: rgba(68, 69, 67, 1);
 }
 
 /* Mobile Nav Links */
@@ -268,7 +277,7 @@ padding: 20px;
   width: 100%;
   height: auto;
   position: relative;
-  font-size: 2rem;
+  font-size: 1.3rem;
   text-align: center;
   padding: 7px;
 
@@ -503,7 +512,7 @@ padding: 20px;
     top: 7%;
     left: 70%;
     display: block;
-    font-size: 3.2rem;
+    font-size: 3.5rem;
     cursor: pointer;
   }
 
@@ -549,7 +558,11 @@ padding: 20px;
   }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 450px) {
+
+  .mobile-nav {
+    top: 2%;
+  }
 
 
   @keyframes hero {

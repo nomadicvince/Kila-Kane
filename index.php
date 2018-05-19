@@ -7,12 +7,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
 
     $first_name = isset($_POST['first']) ? $_POST['first'] : '';
     $email = $_POST['email'];
-    $comment = $_POST['comment'];
-    
+    $comment = $_POST['comment'];    
     
       // Assume invalid values:
-      $first_name = $email = $comment = FALSE;
-      
+      $first_name = $email = $comment = FALSE;      
     
       // Check for a first name:
       if (preg_match ('/^[A-Z \'.-]{2,20}$/i', $_POST['first'])) {
@@ -32,10 +30,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
       
      if ($_POST['droid'] !='') {
        die ('Seems like you are not human. Bye.');
-     }
-      
-    
-    } // End of the main Submit conditional.
+     }    
+} // End of the main Submit conditional.
   
     if (isset($_POST['first']) && ($_POST['email'])) { // If everything's OK...
   
@@ -44,9 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
           $email = $_POST['email'];
           $comment = $_POST['comment'];
           $date = date('F jS, Y');
-          $copy = date('Y');
-          
-          
+          $copy = date('Y');          
   
                   // Send the email:
                   $from = "tellmeyourstory99.aw@Gmail.com";
@@ -98,20 +92,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
                                                           <!-- end main table --></table>
                                                       <!-- end wrapper table--></table>
                                                   </body>
-                                              </html>
-  ";
+                                              </html>";
                   mail($_POST['email'], 'Hello from Kila Kane', $body, $headers);
                   
                   // Send the email to administrator :
                   $body2 = "Someone has contacted you.  ".$_POST['first']." ".$_POST['email']." ".$_POST['comment']."";
                   mail('tellmeyourstory99.aw@Gmail.com', 'Client question or comment', $body2, 'From: tellmeyourstory99.aw@Gmail.com');
                   
-              echo '<script> alert("Your message has been sent.");</script>';
-  
-  
-                  
-          } 
-
+              echo '<script> alert("Your message has been sent.");</script>';                  
+    } 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -124,13 +113,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body role="main">
   
-<div class="header">
+<div class="header" role="banner">
   <div class="logo">
       <img src="img/kila.png" alt="Kila Kane logo">
   </div>
-  <nav class="navigation">
+  <nav class="navigation" role="navigation">
     <ul>
         <a href="#about"><li>About</li></a>
         <a href="#buy"><li>Buy</li></a>
@@ -138,10 +127,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
         <a href="#contact"><li>Contact</li></a>
     </ul>
    </nav>
-   <div class="mobile-nav">
+   <div class="mobile-nav" role="navigation">
         <i class="fa fa-bars" id="switch" aria-hidden="true" fa-2x></i>
     </div>
-    <div class="hidden-nav">
+    <div class="hidden-nav" role="navigation">
         <ul>
             <a href="#about"><li>About</li></a>
             <a href="#buy"><li>Buy</li></a>
@@ -149,7 +138,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
             <a href="#contact"><li>Contact</li></a>
         </ul>
     </div>
-
 </div>
 
   <div class="hero">
@@ -165,45 +153,40 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
   </div>
   
   <div class="buy" id="buy">
-  <div class="flex-container">
-            <div class="card">
-                <div class="photo">
-                   <img src="img/life.jpeg" alt="">
-                </div>
-                <div class="blurb-container">
-                    <p class="blurb">A story inspired by true events. Life's twists and turns will sometimes pull you in directions you don't want to go.          
-                    </p>
-                    <p class="price"><strong>Buy:</strong> <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WD7BLKHLX2E6Y">Book</a> | <a href="">CD</a> | <a href="">Book + CD</a></p>
-                </div>
-
-             </div>
-
-             <div class="card">
-                <div class="photo">
-                   <img src="img/love.jpeg" alt="">
-                </div>
-                <div class="blurb-container">
-                    <p class="blurb">A story inspired by true events. Life's twists and turns will sometimes pull you in directions you don't want to go.          
-                    </p>
-                    <p class="price"><strong>Buy:</strong> <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WD7BLKHLX2E6Y">Book</a> | <a href="">CD</a> | <a href="">Book + CD</a></p>
+    <div class="flex-container">
+                <div class="card">
+                    <div class="photo">
+                    <img src="img/life.jpeg" alt="Life Wont Wait #FORNOTHING">
+                    </div>
+                    <div class="blurb-container">
+                        <p class="blurb">Inspired by true events, Life Won't Stop #FORNOTHING is an introduction to the life and times of Monty and Tiana and they are just the tip of the iceberg of the #FORNOTHING series.         
+                        </p>
+                        <p class="price"><strong>Buy:</strong> <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WD7BLKHLX2E6Y">Book</a> | <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QCE62NX8CC7GE">CD</a> | <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7TVUB3JB2WS82">Book + CD</a></p>
+                    </div>
                 </div>
 
-             </div>
-
-             <div class="card">
-                <div class="photo">
-                   <img src="img/time.jpeg" alt="">
+                <div class="card">
+                    <div class="photo">
+                    <img src="img/love.jpeg" alt="Love Wont Wait #FORNOTHING">
+                    </div>
+                    <div class="blurb-container">
+                        <p class="blurb">Zawn Mitchell is too busy running a successful club to think about love. With a few unsuccessful attempts to find love, she decides to just focus on the club and worry about love later. That is, until she spots Derrick.          
+                        </p>
+                        <p class="price"><strong>Buy:</strong> <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WD7BLKHLX2E6Y">Book</a> | <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QCE62NX8CC7GE">CD</a> | <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7TVUB3JB2WS82">Book + CD</a></p>
+                    </div>
                 </div>
-                <div class="blurb-container">
-                    <p class="blurb">A story inspired by true events. Life's twists and turns will sometimes pull you in directions you don't want to go.          
-                    </p>
-                    <p class="price"><strong>Buy:</strong> <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WD7BLKHLX2E6Y">Book</a> </p>
-                </div>
 
-             </div>
-             
-        </div>
-
+                <div class="card">
+                    <div class="photo">
+                    <img src="img/time.jpeg" alt="Time Wont Wait #FORNOTHING">
+                    </div>
+                    <div class="blurb-container">
+                        <p class="blurb">Determined to not be stuck in the rat race of country living, Cassidy yearned to venture out and see what the city had to offer her. She didn't anticipate meeting J.H..          
+                        </p>
+                        <p class="price"><strong>Buy:</strong> <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WD7BLKHLX2E6Y">Book</a> </p>
+                    </div>
+                </div>                
+            </div>
   </div>
   
   <div class="blog" id="blog">
@@ -236,14 +219,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form.
   </div>
 
   <footer class="footer">
-    <p>&copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Kila Kane. All Rights Reserved.<br />Designed by Cosmiq Cloud.</p>
+    <p>&copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Kila Kane. All Rights Reserved.<br />Designed by <a href="http://cosmiq.cloud" target="_blank">Cosmiq Cloud</a>.</p>
 
   </footer>
 
   <div id="preloaded-images">
-   <img src="img/kila_main.jpg" width="1" height="1" alt="" />
-   <img src="img/kila.png" width="1" height="1" alt="" />   
-</div>
+     <img src="img/kila_main.jpg" width="1" height="1" alt="" />
+     <img src="img/kila.png" width="1" height="1" alt="" />   
+  </div>
 
 </body>
 </html>

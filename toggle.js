@@ -21,6 +21,8 @@ const linx = document.querySelector('.hidden-nav a').parentElement.parentElement
 window.addEventListener('resize', function(){
   if(window.innerWidth >= 750) {
     linx.remove();
+  } else if (window.innerWidth <= 750){
+    menu.style.display = 'block';
   } else {
     menu.style.display = 'block';
   }
